@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "nah-blocks/point-title",
+  "version": "0.1.0",
+  "title": "Point title",
+  "category": "widgets",
+  "icon": "heading",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    }
+  },
+  "parent": [
+    "nah-blocks/highlight-point"
+  ],
+  "textdomain": "info-points",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
