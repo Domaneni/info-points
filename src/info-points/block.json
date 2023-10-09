@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "nah-blocks/info-points",
+	"version": "0.1.0",
+	"title": "Info Points",
+	"category": "widgets",
+	"icon": "format-image",
+	"description": "Info points block",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"downloadFile": {
+			"type" : "object",
+			"default": {
+				"title": "Info Points Background"
+			}
+		}
+	},
+	"textdomain": "info-points",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

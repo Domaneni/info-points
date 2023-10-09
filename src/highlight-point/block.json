@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "nah-blocks/highlight-point",
+	"version": "0.1.0",
+	"title": "Highlight point",
+	"category": "widgets",
+	"icon": "admin-post",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"positionLeft": {
+			"type" : "number",
+			"default": 0
+		},
+		"positionTop": {
+			"type" : "number",
+			"default": 0
+		}
+	},
+	"parent": ["nah-blocks/info-points"],
+	"textdomain": "info-points",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,65 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-nah-blocks-highlight-point {
+    --point-default-color: #000;
+    --point-default-border-color: #0D7F32;
+    --point-default-background-color: #fff;
+    --point-default-width: 350px;
+    --point-default-summary-background-color: #0D7F32;
+    --point-default-summary-color: #fff;
+
+    position: absolute;
+    top: calc(var(--point-position-top, 0) - 15px);
+    left: calc(var(--point-position-left, 0) - 15px);
+    color: var(--point-text-color, var(--point-default-color));
+
+    summary {
+        &::marker {
+            content: "";
+        }
+
+        background: var(--point-summary-background-color, var(--point-default-summary-background-color));
+        color: var(--point-summary-color, var(--point-default-summary-color));
+        padding: 10px;
+        width: 8px;
+        height: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 29;
+        border-radius: 50%;
+
+        .open {
+            display: flex;
+        }
+        .close {
+            display: none;
+        }
+    }
+
+    &[open] {
+        background: var(--point-background-color, var(--point-default-background-color));
+        padding: 10px;
+        border: 1px solid var(--point-border-color,var(--point-default-border-color));
+        width: var(--point-width, var(--point-default-width));
+        z-index: 29;
+        margin: -11px 0 0 -11px;
+
+        summary {
+            z-index: 29;
+
+            .open {
+                display: none;
+            }
+            .close {
+                display: flex;
+            }
+        }
+    }
+}
