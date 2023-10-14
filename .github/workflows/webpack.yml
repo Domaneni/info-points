@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
@@ -22,6 +22,7 @@ jobs:
       uses: nizarmah/auto-minify@v2.1
       with:
         directory: 'assets'
+        output: 'assets'
   
     # Auto commits minified files to the repository
     # Ignore it if you don't want to commit the files to the repository 
